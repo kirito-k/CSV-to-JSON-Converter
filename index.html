@@ -19,10 +19,11 @@
 <body>
     <div class="jumbotron text-center">
         <h1>WELCOME to CSV - JSON Converter</h1><br>
-        <p>I am a great magician who will take your holy CSV file <br>& convert ito more holy formate called JSON</p><br>
-        <form class="form-inline" action="/fileUpload" method="POST">
+        <p>I am a great magician who will take your holy CSV file <br>
+          & convert it into more holy format called JSON</p><br>
+        <form class="form-inline" action="/fileUpload" method="POST" enctype="multipart/form-data">
           <div class="input-group">
-            <input type="file" id="myFile" name="myFile">
+            <input type="file" name="myFile" >
             <div class="input-group-btn">
                 <input type="submit" class="btn btn-danger">
             </div>

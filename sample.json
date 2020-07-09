@@ -1,0 +1,20 @@
+[
+    {
+    "policyID": 448094,
+    "statecode": "FL",
+    "county": "CLAY",
+    "eq_site_limit": 1322376
+    },
+    {
+        "policyID": 206893,
+        "statecode": "FL",
+        "county": "COUNTY",
+        "eq_site_limit": 190724.4
+    },
+    {
+        "policyID": 333743,
+        "statecode": "FL",
+        "county": "CLAY",
+        "eq_site_limit": 0
+    }
+]

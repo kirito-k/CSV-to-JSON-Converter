@@ -1,6 +1,8 @@
 const path = require('path');
 const express = require('express');
 const port = process.env.port || 3000;
+const multer = require('multer');
+var upload = multer({ dest: 'uploads/' });
 
 const app = express();
 
@@ -12,7 +14,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname + '/index.html'));
 })
 
-app.post('/fileUpload', (req, res) => {
+app.post('/fileUpload', upload.single('myFile'), (req, res) => {
     console.log(req.body);
-    console.log(req.params);
+    console.log(req.file);
 })
