@@ -1,0 +1,11 @@
+  .jumbotron {
+    background-color: #f4511e; /* Orange */
+    color: #ffffff;
+    margin-bottom: 0px;
+    height: 100vh;
+  }
+
+  .btn {
+      background-color: #ffffff;
+      color: #f4511e;
+  }

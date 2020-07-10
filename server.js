@@ -2,48 +2,66 @@ const path = require('path');
 const fs = require('fs');
 const parser = require('node-html-parser').parse;
 const express = require('express');
-const port = process.env.port || 3000;
 const multer = require('multer');
-const { parse } = require('path');
 var upload = multer({ dest: 'uploads/' });
+const csvToJson = require('csvtojson');
 
 const app = express();
 
-// app.listen(port, () => {
-//     console.log("Server is running on port 3000.")
-// })
+const port = process.env.port || 3000;
+app.listen(port, () => {
+    console.log("Server is running on port 3000.")
+})
+
+app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname + '/index.html'));
+    // res.sendFile(path.join(__dirname + '/public/index.html'));
+    res.sendFile('index.html');
 })
+
 
 app.post('/fileUpload', upload.single('myFile'), (req, res) => {
-    console.log(req.body);
-    console.log(req.file);
-    let newFileName = processCSV(req.file.filename)
-})
-
-
-function processCSV(fileName) {
-    let newFileName = 'sample.json';
-    return newFileName;
-}
-
-function addDownLink() {
-    fs.readFile('index.html', (err, html) => {
+    console.log('Received file:', req.file.filename);
+    let newFileName = processCSV(req.file.filename);
+    fs.readFile('public/index.html', (err, html) => {
         if (err) throw err;
         
         let root = parser(html);
-
         let element = root.querySelector('#infoContainer');
         let newElement = 
         "<div class='input-group-btn'> \
-            <a href='downloads/sample.json' class='btn btn-danger' download> \
+            <a href='/getFile/" + req.file.filename + ".json' class='btn btn-danger' download=csv-to-json> \
                 Download File \
             </a> \
          </div>"
         element.appendChild(newElement);
+        
+        res.send(root.toString());
+        console.log('JSON File ready to download.')
     })
+})
+
+
+app.get('/getFile/:fileName', (req, res) => {
+    res.sendFile(path.join(__dirname + '/downloads/' + req.params.fileName));
+})
+
+
+function processCSV(fileName) {
+    let filePath = 'uploads/' + fileName;
+
+    csvToJson().fromFile(filePath)
+        .then(jsonData => {
+            
+            // Write a new json file
+            let jsonFileName = 'downloads/' + fileName + '.json';
+            fs.writeFile(jsonFileName, JSON.stringify(jsonData, null, 4), 'utf8', (err) => {
+                if (err) throw err;
+            })
+            console.log('CSV-JSON processing successful.');
+        })
+        .catch(err => {
+            throw err;
+        })
 }
-// addDownLink()
-// datalink = 'https://github.com/CSSEGISandData/COVID-19/raw/master/who_covid_19_situation_reports/who_covid_19_sit_rep_pdfs/20200121-sitrep-1-2019-ncov.pdf'
