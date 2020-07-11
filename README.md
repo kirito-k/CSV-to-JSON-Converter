@@ -61,6 +61,7 @@ heroku git:remote -a app_name_given_in_heroku
 - Create a .travis.yml file. Copy the contents of my Travis file into yours. You have to make the travis-Heroku key to be inserted in this file. 
 - To create Travis api_key and automatically add it into your Travis file
 ```
+- Create a Procfile. This file tells Heroku on how to start our webapp. Create a file named 'Procfile" in root dir and copy the command of your startup app as shown in my Procfile. 
 travis encrypt $(heroku auth:token) --add deploy.api_key
 ```
 - The last step is to edit your code and push it to GitHub master.
