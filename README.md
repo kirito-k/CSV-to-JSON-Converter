@@ -5,7 +5,7 @@ This is CSV to JSON file converter. In simple terms, it takes CSV files from the
 1. [Pre-requisite](#pre-requisite)
 1. [Implementation](#implementation)
 1. [Screenshots](#screenshots)
-1. [EXTRAS: How to setup Heroku and Travis CI](#extras:-how-to-setup-heroku-and-travis-ci)
+1. [EXTRAS: How to setup Heroku and Travis CI](#extras-how-to-setup-heroku-and-travis-ci)
 1. [Tech Used](#tech-used)
 
 
