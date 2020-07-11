@@ -1,6 +1,14 @@
 # CSV to JSON Converter
 This is CSV to JSON file converter. In simple terms, it takes CSV files from the user and converts it into JSON format.
 
+## Table of Contents
+1. [Pre-requisite](#pre-requisite)
+1. [Implementation](#implementation)
+1. [Screenshots](#screenshots)
+1. [EXTRAS: How to setup Heroku and Travis CI](#extras:-how-to-setup-heroku-and-travis-ci)
+1. [Tech Used](#tech-used)
+
+
 ## Pre-requisite
 - Node.js
 - npm
@@ -18,7 +26,9 @@ node server.js
 - Open a browser and browse 'localhost:3000'
 
 ## Screenshots
+![](./img/main.png)
 
+![](./img/download.png)
 
 ## EXTRAS: How to setup Heroku and Travis CI
 - Create an account on Travis and connect it to your Github when prompted. 
@@ -57,7 +67,7 @@ travis encrypt $(heroku auth:token) --add deploy.api_key
 
 CONGRATS!! Your CI(Travis) and CD(Heroku) is working and you can check the logs on their website's respective dashboards. 
 
-### Tech used
+## Tech Used
 - Node.js (language)
 - Express.js (server library)
 - Vanilla HTML,CSS
