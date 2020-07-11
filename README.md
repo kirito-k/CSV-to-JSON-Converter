@@ -1,13 +1,14 @@
 # CSV to JSON Converter
 This is CSV to JSON file converter. In simple terms, it takes CSV files from the user and converts it into JSON format.
 
+Live version of app: https://csv-to-json-converter.herokuapp.com/
+
 ## Table of Contents
 1. [Pre-requisite](#pre-requisite)
 1. [Implementation](#implementation)
 1. [Screenshots](#screenshots)
 1. [EXTRAS: How to setup Heroku and Travis CI](#extras-how-to-setup-heroku-and-travis-ci)
 1. [Tech Used](#tech-used)
-
 
 ## Pre-requisite
 - Node.js
@@ -24,6 +25,7 @@ npm install
 node server.js
 ```
 - Open a browser and browse 'localhost:3000'
+- You can test the working by uploading the provided csv files named as testFiles in root directory.
 
 ## Screenshots
 ![](./img/main.png)
