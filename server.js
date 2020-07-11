@@ -54,6 +54,11 @@ function processCSV(fileName) {
     csvToJson().fromFile(filePath)
         .then(jsonData => {
             
+            // Check downloads folder doesn't exist, make one
+            if (!fs.existsSync('./downloads')) {
+                fs.mkdirSync('./downloads');
+            }
+
             // Write a new json file
             let jsonFileName = 'downloads/' + fileName + '.json';
             fs.writeFile(jsonFileName, JSON.stringify(jsonData, null, 4), 'utf8', (err) => {

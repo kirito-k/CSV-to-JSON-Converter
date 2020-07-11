@@ -1,0 +1,8 @@
+language: node
+deploy:
+  provider: heroku
+  api_key:
+    secure: bwkmuw70zPgjq1jXwUQfY0KTSaWz5E5VptrBzyhTyVyXx/UqhVMA3EHAWQvYI5sTgrTzvsULuPoNrejN1EyHMfLqVUmeww8TUVyWKrhfL8+fRMAEkMpFVJ8Ad+TmReyrVhzaMTvL3vwl2sMcYwYW2JXHCCT3yjFDtTkBww1u2ocZSOAeVmwhsf3CLfKJSUfkfLtZHkr7xA0ao9g1MKCeH47OoR/1U4Z/th5BDt6+OXLbQyAMMsxHczCMsSD8JoWHoJhjL8NSG3xyXUjfleYmO1YKjmOcMt+H1EPumWGUltOV1VhDkQ+QBZuzoAL+SwEwYxKU5GBMy+jiSgClMpFS5uhxRvqfIwR+nXdPavhbCkanxKRwuGjZkatg0h55aOFt6XkbggZNa+cmJBLFmu2U7oH/9ZyDcPENgx+Qtk9uWibhUDTLILvaABmQ+yHxMEvSGYah4p7/rZOo4NCJW0gnxzLSZvUxLHZZfWNqnwJhI8sIuT75o9AEssOmCzovRMdsKMhwtt9Uq92chT7jt0+YXdqIlbFBBroeOcnNhcqtxpAEqLIQwONTl9uYIl+cgqIhbprxvuE5MdZgyoii5xDnfQgtq5hQ1u3b4iBnGKq8nXLwUL6i4+iRDacyQ0NjevO2s6Mcr8OS27ZWZv0Bq3+pZuDrMwa3urZeN3VeBi0t/l4=
+  app: csv-to-json-converter
+  on:
+    repo: kirito-k/CSV-to-JSON-Converter
