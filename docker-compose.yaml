@@ -1,0 +1,6 @@
+version: "3"
+services:
+  csv-to-josn:
+    build: .
+    ports:
+     - 80:3000

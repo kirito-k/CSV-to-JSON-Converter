@@ -1,0 +1,47 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2020-07-12T17:18:45Z"
+  labels:
+    run: csv-to-json
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:run: {}
+      f:spec:
+        f:ports:
+          .: {}
+          k:{"port":80,"protocol":"TCP"}:
+            .: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector:
+          .: {}
+          f:run: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: kubectl
+    operation: Update
+    time: "2020-07-12T17:18:45Z"
+  name: csv-to-json-svc
+  namespace: default
+  resourceVersion: "3336"
+  selfLink: /api/v1/namespaces/default/services/csv-to-json-svc
+  uid: e2460394-1b54-467c-8619-88e7cbbfa62b
+spec:
+  ports:
+  - port: 3000
+    protocol: TCP
+    nodePort: 30080
+    targetPort: 3000
+  type: NodePort
+  selector:
+    run: csv-to-json
+  sessionAffinity: None
+status:
+  loadBalancer: {}

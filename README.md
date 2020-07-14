@@ -1,5 +1,10 @@
+
 # CSV to JSON Converter
 This is CSV to JSON file converter. In simple terms, it takes CSV files from the user and converts it into JSON format.
+
+###Gaurav branch###
+Added Dockerfile,docker compose file  and k8s svc and pod file
+
 
 Live version of app: https://csv-to-json-converter.herokuapp.com/
 
@@ -76,3 +81,9 @@ CONGRATS!! Your CI(Travis) and CD(Heroku) is working and you can check the logs 
 - Vanilla HTML,CSS
 - Travis CI (Continuous Integration)
 - Heroku (Continuous Deployment)
+
+
+
+
+It is dockerized app.
+exposed at port 80.(underlaying app working on port 3000)
