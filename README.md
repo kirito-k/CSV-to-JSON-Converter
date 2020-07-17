@@ -82,4 +82,4 @@ CONGRATS!! Your CI(Travis) and CD(Heroku) is working and you can check the logs 
 
 
 It is dockerized app.
-exposed at port 80.(underlaying app working on port 3000)
+exposed at port 80.(underlaying app working on port 3000).
