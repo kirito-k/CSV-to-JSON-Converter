@@ -1,6 +1,7 @@
 
 # CSV to JSON Converter
-This is CSV to JSON file converter. In simple terms, it takes CSV files from the user and converts it into JSON format.
+This is CSV to JSON file converter. 
+In simple terms, it takes CSV files from the user and converts it into JSON format.
 
 Live version of app: https://csv-to-json-converter.herokuapp.com/
 
