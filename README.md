@@ -8,9 +8,9 @@ Live version of app: https://csv-to-json-converter.herokuapp.com/
 ## Table of Contents
 1. [Pre-requisite](#pre-requisite)
 1. [Implementation](#implementation)
-1. [Screenshots](#screenshots)
+1. [Demo](#demo)
 1. [EXTRAS: How to setup Heroku and Travis CI](#extras-how-to-setup-heroku-and-travis-ci)
-1. [Tech Used](#tech-used)
+1. [Technologies Used](#technologies-used)
 
 ## Pre-requisite
 - Node.js
@@ -29,7 +29,7 @@ node server.js
 - Open a browser and browse 'localhost:3000'
 - You can test the working by uploading the provided csv files named as testFiles in root directory.
 
-## Screenshots
+## Demo
 <img src="https://raw.githubusercontent.com/kirito-k/CSV-to-JSON-Converter/master/Demo/1.gif" title="Short Demo gif" />
 
 ## EXTRAS: How to setup Heroku and Travis CI
@@ -70,7 +70,7 @@ travis encrypt $(heroku auth:token) --add deploy.api_key
 
 CONGRATS!! Your CI(Travis) and CD(Heroku) is working and you can check the logs on their website's respective dashboards. 
 
-## Tech Used
+## Technologies Used
 - Node.js (language)
 - Express.js (server library)
 - Vanilla HTML,CSS
