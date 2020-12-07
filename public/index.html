@@ -1,36 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>Bootstrap Theme Company</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link href="index.css?rnd=132" type="text/css" rel="stylesheet"/>
-</head>
-<style>
-  .jumbotron {
-    background-color: #f4511e; /* Orange */
-    color: #ffffff;
-    margin-bottom: 0px;
-    height: 100vh;
-  }
-</style>
-<body>
-    <div class="jumbotron text-center" id='infoContainer'>
-        <h1>WELCOME to CSV - JSON Converter</h1><br>
-        <p>I am a great tech magician who will take your holy CSV file <br>
-          & convert it into more holy format called JSON</p><br>
-        <form class="form-inline" action="/fileUpload" method="POST" enctype="multipart/form-data">
-          <div class="input-group">
-            <input type="file" name="myFile" accept=".csv">
-            <div class="input-group-btn">
-                <input type="submit" class="btn btn-danger">
-            </div>
+    <link href="index.css?rnd=132" type="text/css" rel="stylesheet" />
+  </head>
+  <style>
+    .jumbotron {
+      background-color: #f4511e; /* Orange */
+      color: #ffffff;
+      margin-bottom: 0px;
+      height: 100vh;
+    }
+  </style>
+  <body>
+    <div class="jumbotron text-center" id="infoContainer">
+      <h1>WELCOME to CSV - JSON Converter</h1>
+      <br />
+      <p>
+        I am a great tech magician who will take your holy CSV file <br />
+        & convert it into more holy format called JSON
+      </p>
+      <br />
+      <form
+        class="form-inline"
+        action="/fileUpload"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <div class="input-group">
+          <input type="file" name="myFile" accept=".csv" />
+          <div class="input-group-btn">
+            <input type="submit" class="btn btn-danger" />
           </div>
-        </form>
-        <br><br>
+        </div>
+      </form>
+      <br /><br />
     </div>
-</body>
+  </body>
 </html>
