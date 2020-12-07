@@ -30,9 +30,7 @@ node server.js
 - You can test the working by uploading the provided csv files named as testFiles in root directory.
 
 ## Screenshots
-![](./img/main.png)
-
-![](./img/download.png)
+<img src="https://raw.githubusercontent.com/kirito-k/CSV-to-JSON-Converter/master/Demo/1.gif" title="Short Demo gif" />
 
 ## EXTRAS: How to setup Heroku and Travis CI
 - Create an account on Travis and connect it to your Github when prompted. 
